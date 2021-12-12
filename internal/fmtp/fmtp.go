@@ -40,10 +40,6 @@ func Parse(mimetype, line string) FMTP {
 		f = &h264FMTP{
 			parameters: parameters,
 		}
-	case strings.EqualFold(mimetype, "video/h265"):
-		f = &hevcFMTP{
-			parameters: parameters,
-		}
 	default:
 		f = &genericFMTP{
 			mimeType:   mimetype,
